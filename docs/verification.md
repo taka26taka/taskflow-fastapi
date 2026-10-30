@@ -46,6 +46,6 @@ Playwright / Chromium、PC 1440px、スマートフォン相当390pxで確認し
 ## 未検証・制約
 
 - Dockerコマンドが「このWSLディストリビューションでは利用できない」と返しました。Docker DesktopのWSL Integration有効化後に `docker compose up --build` の実機検証が必要です。構成ファイルは作成済みで、CIにもコンテナ起動検証を用意しました。
-- GitHubリポジトリの作成・push・公開は依頼の範囲外のため実施していません。GitHub Actions上での成功はまだ確認できていません。
+- コードは [taka26taka/taskflow-fastapi](https://github.com/taka26taka/taskflow-fastapi) に公開済みです。GitHub Actionsの結果は [実行履歴](https://github.com/taka26taka/taskflow-fastapi/actions) を参照してください。ローカルでのDocker起動は上記の環境制約により未検証です。
 - Cloudflare設定、実機スマートフォンでの操作、別ブラウザでの検証は行っていません。
 - 認証はありません。外部公開前のAccessまたは認証・認可が必須です。
