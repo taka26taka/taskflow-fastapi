@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////app/data/taskflow.db
+      APP_TIMEZONE: Asia/Tokyo
+    volumes:
+      - taskflow-data:/app/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')",
+        ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+volumes:
+  taskflow-data:
