@@ -36,7 +36,7 @@ CakePHP経験者がPythonの型・バリデーション・ORM・テストを学�
 Docker Desktopの Settings → Resources → WSL Integration で利用するディストリビューションを有効にしてください。
 
 ```bash
-git clone <自分のリポジトリURL>
+git clone https://github.com/taka26taka/taskflow-fastapi.git
 cd taskflow-fastapi
 docker compose up --build
 ```
@@ -157,7 +157,7 @@ erDiagram
 ## CI/CD
 
 mainへのpushとPull Requestで、依存インストール、Ruff、mypy、pytestとカバレッジ、Alembic差分検査、依存の脆弱性確認を実行します。カバレッジXMLを成果物として保存します。Docker Composeによる起動とHTTP応答のスモークテストも別ジョブで実行します。自動デプロイはありません。
-GitHubへの作成・pushを行っていないため、Actionsの実行結果は未確認です。[ローカル検証記録](docs/verification.md)を参照してください。
+実行結果は [GitHub Actions](https://github.com/taka26taka/taskflow-fastapi/actions) で確認できます。[ローカル検証記録](docs/verification.md)も参照してください。
 
 ## セキュリティ
 
